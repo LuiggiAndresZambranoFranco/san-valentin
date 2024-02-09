@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example</title>
+    <script type="text/javascript">
+      function showExplanation() {
+        const apiUrl = "https://api.openai.com/v1/chat/completions";
+        const apiKey = "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";
+        const prompt = "quiero que digas poemas de amistad.";
+
+        fetch(apiUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({
+            messages: [
+              { role: "system", content: "¿dime un mensaje de amistad?" },
+              { role: "user", content: prompt }
+            ],
+            max_tokens: 1024,
+            temperature: 0.2,
+            model: "gpt-3.5-turbo"
+          })
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then(output => {
+          if (output.choices && output.choices.length > 0 && output.choices[0].message.content) {
+            const explanation = output.choices[0].message.content;
+            alert(explanation);
+          } else {
+            throw new Error("Unexpected response format");
+          }
+        })
+        .catch(error => console.error(error));
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="showExplanation()">Generar Poema de Amistad</button>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+/* Estilos para el contador de cuenta regresiva */
+.countdown {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Estilos para la tarjeta de San Valentín */
+  .hidden {
+    display: none;
+  }
+  
+  /* Estilos para la animación de corazones */
+  .hearts-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  /* Estilos para el contador de cuenta regresiva */
+/* Estilos para el contador de cuenta regresiva */
+.countdown {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo blanco con opacidad del 70% */
+    padding: 20px; /* Añadir espacio alrededor del texto */
+    border-radius: 10px; /* Borde redondeado */
+    color: #721c24; /* Color del texto */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    background-image: url('https://s1.significados.com/foto/dia-de-san-valentin-og.jpg'); /* Cambia 'tu-imagen-de-fondo.jpg' por la ruta de tu imagen de fondo */
+    background-size: cover; /* Para que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; /* Para centrar la imagen de fondo */
+    background-attachment: fixed; /* Para que la imagen de fondo permanezca fija */
+  }
+
+  
+/* Estilos para el contenido de la tarjeta de San Valentín */
+.love-message, .poem {
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el contenido oculto */
+  .hidden {
+    display: none;
+  }
+  
