@@ -1,30 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>San Valentín</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <div id="countdown" class="countdown">
-    Hora del dia de san valentin
-  </div>
-  <div id="valentineCard" class="hidden">
-    <!-- Contenido de la tarjeta de San Valentín interactivo -->
-    <div id="loveMessage" class="love-message">
-      Haz clic para revelar el motivo de esta pagina.
-      <p class="love-message-content hidden">¡Te quiero con todo mi corazón! <br> te agradezco por todo lo que diste por mi y por lo mucho que velabas fuiste la mejor "niña de ojos cafes" como es el dia de la amistad y aprecio mucho tu amistad quise hacer algo simple espero que le guste</p>
-    </div>
-    <div id="poem" class="poem">
-      Haz clic para generar un poema de amor.
-      <p class="poem-content hidden"></p>
-    </div>
-  </div>
-  
-  
-  <canvas id="heartsAnimation" class="hearts-animation"></canvas>
-  <script src="index.js"></script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San Valentín</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="probando.css" />
+  </head>
+  <body>
+    <div id="countdown" class="countdown"></div>
+    <div id="valentineCard" class="hidden">
+      <img
+        src="https://usagif.com/wp-content/uploads/gif/panda-93.gif"
+        alt=""
+      />
+      <div id="loveMessage" class="card love-message">
+        Haz clic para revelar un mensaje que piensa el panda.
+      </div>
+      <p class="love-message-content hidden"></p>
 
+      <div class="titulo">
+        Quizás sea mi última vez programando, la verdad no siento que esto sea 
+        para mí, pero en un día como hoy quería decirte unas palabras. Espero que 
+        las leas todas, por favor. ¡No le pueden dar coraje! son mensajes que me nacieron
+        jejeje tómelo con humor otros como sentimental o risa o no sé, pero léalos 😅
+        
+      </div>
+      <div class="heart-container">
+        <!-- Contenido de los mensajes en corazones -->
+        <div class="heart">
+          Fuiste una muy buena amiga, una pareja consejera y todo. Aprecio mucho tu amistad 😊
+        </div>
+        <div class="heart">
+          No me pienso interponer más. Hemos tenido 3 conversaciones en las que vi cosas que hice mal. Mejoraré, tranquila. Sé feliz, mi gran y mejor amiga de ojos cafés bonitos.
+        </div>
+        <div class="heart">
+          Jajajaja, la verdad, no me hacía mal verla. Cuando la veía era porque sentía ganas de ver cómo se encontraba, tanto física como mentalmente. Me calmaba.
+        </div>
+        <div class="heart">
+          Usted me dijo en una de esas conversaciones que yo quería las cosas y no me las compraba por trabajo, pero no es así. La verdad, usted sabe que yo pido cosas, pero no me gusta comprármelas. Sin embargo, si usted quería, lo compraba. No era por tema económico, solo me gustaba comprarle a usted, pero gastar en mí no.
+        </div>
+        <div class="heart">
+          Siempre serás la mejor. Espero saber que cumplas tus sueños y todos tus estudios deseados. Los logres cumplir estaré para ti cuando lo necesites. Si quieres llamarme y contarme cómo te sientes, si sientes que no puedes más y necesitas quien te escuche, llámame. jejeje Si quieres pelear con alguien, igualmente, pero yo ganaré 😜
+        </div>
+        <div class="heart">
+          Usted me dijo una vez que no prometiera las cosas, pero hay muchas promesas que no pude cumplir, y es verdad. Muchas rompí y me las volvía a proponer, aunque ya no le dijera, desearía hacerlas todas. No podré cumplirlas al 100%, se cumplirán solo una parte.
+        </div>
+        <div class="heart">
+          Jajajaja, para ir culminando con estas frases, no creas que los hice triste ni nada. La verdad es que estoy loquito y tengo unos problemas por ahí 😁😁 Pero los bonitos recuerdos me vienen a la mente como ayuda.
+        </div>
+        <div class="heart">
+          Hay cosas que mi mente ha cambiado mucho, y estoy aprendiendo a controlar. No muy bien, pero aprendo a controlar las voces de mi mente y los tips de ansiedad que dan, y cosas así, ya que son un sin número. Usted vio uno de esos episodios.
+        </div>
+        <div class="heart">
+          Por último, recuerde, mi familia también está para usted. La aprecia y la estima. Si siente ganas de visitar, también es bienvenida. Si me invita a conversar a un atardecer o a un lugar donde se sienta cómoda, no se preocupe, que ahí estaré como un gran amigo.
+        </div>
+        <div class="heart">
+            Este contiene un regalo para ti. Puedes abrirlo en el siguiente enlace:
+            <a href="./rosas/rosa.html">Prueba abrirlo</a>
+          </div>
+          
+      </div>
+    
+   
+    
+      <!-- Contenido de la tarjeta de San Valentín interactivo -->
+  
+
+      <div id="poem" class="card poem">
+        Haz clic para generar algo que quiero decirte.
+      </div>
+      <div class="poem-content hidden">
+        <div class="poem-grid">
+          <div class="poem-card poem-1">
+            <!-- Contenido del primer poema -->
+          </div>
+          <div class="poem-card poem-2">
+            <!-- Contenido del segundo poema -->
+          </div>
+          <div class="poem-card poem-3">
+            <!-- Contenido del tercer poema -->
+          </div>
+        </div>
+      </div>
+
+      <div class="mensaje">
+        Quieres ver algo que programe en agosto 2023 y lo encontre
+      </div>
+      <button id="florBtn">
+        Ahora antes de salir de aquí revisalo espero te guste
+      </button>
+    </div>
+
+    <canvas id="heartsAnimation" class="hearts-animation"></canvas>
+    <script src="index.js"></script>
+  </body>
+</html>

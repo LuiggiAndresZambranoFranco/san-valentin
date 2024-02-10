@@ -1,26 +1,5 @@
 /* Estilos para el contador de cuenta regresiva */
 .countdown {
-    font-size: 24px;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  /* Estilos para la tarjeta de San Valentín */
-  .hidden {
-    display: none;
-  }
-  
-  /* Estilos para la animación de corazones */
-  .hearts-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 1000;
-  }
-  /* Estilos para el contador de cuenta regresiva */
-/* Estilos para el contador de cuenta regresiva */
-.countdown {
     font-size: 48px;
     text-align: center;
     margin-top: 50px;
@@ -28,29 +7,192 @@
     padding: 20px; /* Añadir espacio alrededor del texto */
     border-radius: 10px; /* Borde redondeado */
     color: #721c24; /* Color del texto */
+    width: 50%; /* Ancho del contador */
+    margin: 0 auto; /* Centrar horizontalmente */
 }
 
 /* Estilos para el cuerpo de la página */
 body {
-    background-image: url('https://s1.significados.com/foto/dia-de-san-valentin-og.jpg'); /* Cambia 'tu-imagen-de-fondo.jpg' por la ruta de tu imagen de fondo */
+    background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXl2Z2dyNTk0Y2IxbDB3NHRjdnh5dHB2bXM5eGxvZGo4NzQ5djgxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FsHDrcbvYeRkA/giphy.gif"); 
+    background-position: center; 
     background-size: cover; /* Para que la imagen de fondo cubra todo el cuerpo */
     background-position: center; /* Para centrar la imagen de fondo */
     background-attachment: fixed; /* Para que la imagen de fondo permanezca fija */
-  }
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    color: #333; /* Color del texto */
+}
 
-  
+/* Estilos para la animación de corazones */
+.hearts-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
 /* Estilos para el contenido de la tarjeta de San Valentín */
-.love-message, .poem {
+.love-message,
+.poem {
     cursor: pointer;
     text-align: center;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos para el contenido oculto */
-  .hidden {
+    margin: 20px auto; /* Centrar horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el contenido oculto */
+.hidden {
     display: none;
+}
+/* Animación para mostrar el contenido de love-message-content */
+
+.love-message-content {
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px auto; /* Centrar horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Ocultar el contenido que no cabe en el contenedor */
+    white-space: nowrap; /* No permitir saltos de línea */
+    animation: revealContent 1s ease forwards; /* Aplicar la animación */
+}
+
+.poem-content {
+    display: grid;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin: 20px auto; /* Centrar horizontalmente */
+
+  }
+
+  .poem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas con ancho igual */
+    gap: 20px; /* Espacio entre las tarjetas */
   }
   
+  .poem-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilos de fondo para cada tarjeta de poema */
+  .poem-1 {
+    background-color: #FDD;
+  }
+  
+  .poem-2 {
+    background-color: #DFD;
+  }
+  
+  .poem-3 {
+    background-color: #DDF;
+  }
+  
+  .poem-content.hidden {
+    display: none; /* Ocultar los poemas inicialmente */
+  }
+  
+  @media (max-width: 768px) {
+    .poem-grid {
+      grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas más pequeñas */
+    }
+  }
+  
+  .poem-content .poem-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+
+  
+/* Estilos generales para las tarjetas */
+.card {
+    width: 70%; /* Ancho de las tarjetas */
+}
+
+/* Estilos para el botón */
+button {
+    display: block;
+    margin: 20px auto; /* Centrar horizontalmente */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #ff4d4d; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    color: #fff; /* Color del texto */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+button:hover {
+    background-color: #ff6666; /* Cambiar color de fondo al pasar el mouse */
+}
+
+/* Estilos específicos para el card de mensaje de amor */
+.love-message {
+    color: #e83e8c; /* Color del texto */
+}
+
+/* Estilos específicos para el card de poema */
+.poem {
+    color: #007bff; /* Color del texto */
+}
+
+img {
+    width: 10%; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Hacer que la imagen sea un bloque para poder aplicar márgenes automáticos */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.mensaje{
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px auto; /* Centrar horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+
+.heart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .heart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .titulo{
+    background-color: rgb(225, 211, 211);
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+  }
