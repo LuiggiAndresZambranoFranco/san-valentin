@@ -1,5 +1,5 @@
 // Fecha de San Valentín (mes comienza desde 0, por lo que 1 representa febrero)
-const valentinesDay = new Date(new Date().getFullYear(), 1, 14);
+const valentinesDay = new Date(new Date().getFullYear(), 1, 10);
 
 // Función para actualizar el contador de cuenta regresiva
 function updateCountdown() {
